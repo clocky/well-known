@@ -19,5 +19,4 @@ jobs:
           remote-user: clocky_clocky
           private-ssh-key: ${{ secrets.SSH_KEY }}
           destination-path: /home/public
-          
-    
+
