@@ -1,1 +1,6 @@
-add_header 'Access-Control-Allow-Origin' '*';
+RewriteEngine On
+RewriteRule ^.well-known/host-meta(.*)$ https://mastodon.design/.well-known/host-meta?resource=acct:clocky@mastodon.design [L,R=301]
+RewriteRule ^.well-known/webfinger(.*)$ https://mastodon.design/.well-known/webfinger?resource=acct:clocky@mastodon.design [L,R=301]
+RewriteRule ^.well-known/nodeinfo(.*)$ https://mastodon.design/.well-known/nodeinfo?resource=acct:clocky@mastodon.design [L,R=301]
+
+Header add Access-Control-Allow-Origin "*"
