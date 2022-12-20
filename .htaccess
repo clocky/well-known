@@ -4,3 +4,4 @@ RewriteRule ^.well-known/webfinger(.*)$ https://mastodon.design/.well-known/webf
 RewriteRule ^.well-known/nodeinfo(.*)$ https://mastodon.design/.well-known/nodeinfo?resource=acct:clocky@mastodon.design [L,R=301]
 
 Header add Access-Control-Allow-Origin "*"
+Header add Content-Security-Policy "script-src 'sha256-M9CcL4U9rImL9PnxChDxILV88z5giuYj/Odu8TOWfzY=' plausible.io unpkg.com; object-src 'none'; base-uri 'none';"
